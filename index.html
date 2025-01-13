@@ -1,49 +1,87 @@
 <!DOCTYPE html>
-<html lang="lv">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div id="komanduNosaukumi">
-        <div id="komanda1Nosaukums">Komandas nosaukums</div>
-        <div id="komanda2Nosaukums">Komandas nosaukums</div>
+  <div id = "komanduNosaukumi" class = "row mt-3 gap-4 justify-content-center">
+    <div id = "komanda1Nosaukums" class = "col-3 bg-primary text-white fw-bold text-center"> Komandas nosaukums </div>
+    <div class = "col-3"></div>
+    <div id = "komanda2Nosaukums" class = "col-3 bg-primary text-white fw-bold text-center"> Komandas nosaukums </div>
+  </div>
+  <div id = "kopaPunktiTaimeris" class = "row gap-4 mt-3 justify-content-center" style="height:150px;">
+    <div id = "komanda1Punkti" class = "col-3 bg-primary text-white fw-bold text-center d-flex align-items-center justify-content-center" style="font-size: 100px" > 0 </div>
+    <div id = "taimeris" class = "col-3 bg-primary text-white fw-bold text-center d-flex align-items-center justify-content-center" style="font-size: 100px"> 10:00 </div>
+   
+    <div id = "komanda2Punkti" class = "col-3 bg-primary text-white fw-bold text-center d-flex align-items-center justify-content-center" style="font-size: 100px"> 0 </div>
+  </div>
+  <div class = "row justify-content-center gap-4 mt-2">
+    <button id = "pauze" class = "col-1"> Pause </button>
+    <button id = "atsakt" class ="col-1" > Atsākt </button>
+  </div>
+   
+  <div id = "punktuPogasPiezimes" class = "row mt-3 gap-4 justify-content-center">
+    <div id = "komanda1PunktuPogas" class = "col-2 border">
+      <button id = "komanda1Plus1" class = "btn btn-primary m-1 "> +1 </button>
+      <button id = "komanda1Plus2" class = "btn btn-primary m-1"> +2 </button>
+      <button id = "komanda1Plus3" class = "btn btn-primary m-1"> +3 </button><br>
+      <button id = "komanda1Minuss1" class = "btn btn-primary m-1"> -1 </button>
+      <button id = "komanda1Minuss2" class = "btn btn-primary m-1"> -2 </button>
+      <button id = "komanda1Minuss3" class = "btn btn-primary m-1"> -3 </button>
     </div>
-    <div id="punktiTaimeris">
-        <div id="komanda1Punkti">0</div>
-        <div id="taimeris">10:00</div>
-        <div id="komanda2Punkti">0</div>
+    <div id = "komanda1Piezimes" class = "col-2 border bg-primary text-white fw-bold text-center">
+      <div id = "komanda1PiezimesKopa" class = "fs-1"> 0 </div>
+      <button id = "komanda1PiezimesPlus" class = "btn btn-secondary"> + </button>
+      <p>Komandas piezīmes</p>
     </div>
-    <div id="punktuPogasPiezimes">
-        <div id="komanda1PunktuPogas">
-            <button>+1</button>
-            <button>+2</button>
-            <button>+3</button>
-            <button>-1</button>
-            <button>-2</button>
-            <button>-3</button>
-        </div>
-        <div id="komanda1Piezimes">
-            <button>Piezīmes +</button>
-        </div>
-        <div id="komanda2PunktuPogas">
-            <button>+1</button>
-            <button>+2</button>
-            <button>+3</button>
-            <button>-1</button>
-            <button>-2</button>
-            <button>-3</button>
-        </div>
-        <div id="komanda2Piezimes">
-            <button>Piezīmes +</button>
-        </div>
+    <div id = "komanda2Piezimes" class = "col-2 border bg-primary text-white fw-bold text-center">
+      <div id = "komanda2PiezimesKopa" class = "fs-1"> 0 </div>
+      <button id = "komanda2PiezimesPlus" class = "btn btn-secondary"> + </button>
+      <p>Komandas piezīmes</p>
     </div>
-    <div>4.rindiņa</div>
-    <div>5.rindiņa</div>
-    <div>.rindiņa</div>
+    <div id = "komanda2PunktuPogas" class = "col-2 border">
+      <button id = "komanda2Plus1" class = "btn btn-primary m-1"> +1 </button>
+      <button id = "komanda2Plus2" class = "btn btn-primary m-1"> +2 </button>
+      <button id = "komanda2Plus3" class = "btn btn-primary m-1"> +3 </button>
+      <button id = "komanda2Minuss1" class = "btn btn-primary m-1"> -1 </button>
+      <button id = "komanda2Minuss2" class = "btn btn-primary m-1"> -2 </button>
+      <button id = "komanda2Minuss3" class = "btn btn-primary m-1"> -3 </button>
+    </div>
+  </div>
+  <div id = "punktuVesture" class = "row justify-content-center gap-4 mt-1">
+    <button id = "komanda1PunktuVesture" class = "col-2 btn btn-primary "> Punktu vēsture </button>
+    <button id = "komanda2PunktuVesture" class = "col-2 btn btn-primary "> Punktu vēsture </button>
+  </div>
+  <div class = "row justify-content-center fs-1 fw-bold text-decoration-underline">STATISTIKA</div>
+  <div id = "vestureAugsupielade" class = "row justify-content-center gap-4 mt-1">
+    <div id = "komanda1UpPoga" class = "col-3 btn btn-primary text-primary">
+      <input type = "file" id = "komanda1Augsupielade" accept = ".txt">
+    </div>
+    <div class = "col-2"></div>
+    <div id = "komanda2UpPoga" class = "col-3 btn btn-primary text-primary">
+      <input type = "file" id = "komanda2Augsupielade" accept = ".txt">
+    </div>
+  </div>
+  <div id = "statistika">
+    <canvas id = "komanda1Statistika" style = "border: 1px solid;"></canvas>
+    <canvas id = "komanda2Statistika" style = "border: 1px solid;"></canvas>
+  </div>
+  
+  
+  
+  
+  
+  
+  <script src="script.js"></script>
+
+  
 
 </body>
 
